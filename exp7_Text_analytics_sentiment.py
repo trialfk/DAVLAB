@@ -5,6 +5,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
 data = pd.read_csv("sentiment.csv")
+# data = pd.read_csv(r"sentiment.csv")  #use for windows
 # print(head(data)) # ro print whole data 
 # print(data.head(5))  #to print dataset ( top 5 rows )
 
