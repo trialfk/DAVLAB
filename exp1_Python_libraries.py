@@ -64,14 +64,6 @@ model = sm.OLS(y, X).fit()
 print("\n*** Statsmodels ***")
 print(model.summary())
 
-# pip install tensorflow
-import tensorflow as tf
-x = tf.constant([[1.0, 2.0]])
-w = tf.Variable([[2.0], [3.0]])
-y = tf.matmul(x, w)
-print("\n*** TensorFlow ***")
-print("Output:", y.numpy())
-
 # pip install torch
 import torch
 x = torch.tensor([[1.0, 2.0]])
