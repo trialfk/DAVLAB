@@ -8,31 +8,6 @@ data = pd.read_csv("sentiment.csv")
 # print(head(data)) # ro print whole data 
 # print(data.head(5))  #to print dataset ( top 5 rows )
 
-# data = pd.DataFrame({   # use if importing csv not working else remove this block
-#     "message": [
-#         "I really love this product",
-#         "This is the worst experience ever",
-#         "Amazing service and friendly staff",
-#         "I am very disappointed with the quality",
-#         "It was okay nothing special",
-#         "Absolutely fantastic highly recommend",
-#         "Terrible I will never buy again",
-#         "Pretty good overall",
-#         "Customer support was very helpful",
-#         "The product broke after one use",
-#         "Not bad could be better",
-#         "Excellent quality and fast delivery",
-#         "Very poor packaging and late delivery",
-#         "I am satisfied with the purchase",
-#         "Waste of money totally disappointed",
-#         "Average experience nothing great"
-#     ],
-#     "sentiment": [
-#         "positive","negative","positive","negative","neutral","positive","negative","positive",
-#         "positive","negative","neutral","positive","negative","positive","negative","neutral"
-#     ]
-# })
-
 #  Convert labels
 data['sentiment'] = data['sentiment'].map({
     'negative': 0,
