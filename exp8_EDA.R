@@ -1,6 +1,6 @@
 # Aim : Perform exploratory data analysis (EDA) using R by importing, cleaning, and visualizing data to extract 
 # insights and understand data distributions.(na,summary,plot,hist,boxplot).
-install.packages("ggplot2")
+install.packages("ggplot2") 
 install.packages("dplyr")
 # Load libraries
 library(ggplot2)
