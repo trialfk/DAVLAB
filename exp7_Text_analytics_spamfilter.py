@@ -3,27 +3,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
-#
+
 data = pd.read_csv("spam.csv")
 # print(data.head(7)) # print first 7 rows of dataset
-
-# data = pd.DataFrame({    # use if importing csv not working else remove this block
-#     "message": [
-#         "Hey how are you",
-#         "Let's meet tomorrow",
-#         "Free cash prize waiting",
-#         "Call me later",
-#         "Win money now",
-#         "Congratulations you won lottery",
-#         "Are you coming today",
-#         "Click here to claim reward"
-#     ],
-#     "label": [
-#         "ham","ham","spam","ham","spam","spam","ham","spam"
-#     ]
-# })
-# print(data)
-
 
 #  Convert labels to numeric
 data['label'] = data['label'].map({'ham': 0, 'spam': 1})
