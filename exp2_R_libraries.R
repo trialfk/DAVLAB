@@ -1,15 +1,27 @@
-# install.packages("dplyr")   # use if libraries not installed 
-# install.packages("ggplot2")
-# install.packages("tidyr")
-# install.packages("data.table")
-# install.packages("caret")
+install.packages("dplyr")   
+install.packages("ggplot2")
+install.packages("tidyr")
+install.packages("data.table")
+install.packages("caret")
 
 library(dplyr)
 # Filter cars with mpg greater than 20
 filtered_data <- mtcars %>%
   filter(mpg > 20)
-
 print(filtered_data)
+
+# Arrange (sort)
+arranged_data <- mtcars %>%
+  arrange(desc(mpg))
+
+print(arranged_data)
+
+# Group and summarize
+grouped_data <- mtcars %>%
+  group_by(cyl) %>%
+  summarize(avg_mpg = mean(mpg))
+
+print(grouped_data)
 
 
 library(ggplot2)
@@ -19,6 +31,7 @@ ggplot(mtcars, aes(x = hp, y = mpg)) +
   labs(title = "Horsepower vs. MPG",
        x = "Horsepower",
        y = "Miles per Gallon")
+
 
 
 library(tidyr)
@@ -37,12 +50,14 @@ tidy_data <- data %>%
 print(tidy_data)
 
 
+
 library(data.table)
 # Create a data.table
 data <- data.table(mtcars)
 # Calculate mean mpg by number of cylinders
 result <- data[, .(mean_mpg = mean(mpg)), by = cyl]
 print(result)
+
 
 
 library(caret)
