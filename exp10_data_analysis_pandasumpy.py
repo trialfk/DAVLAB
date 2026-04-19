@@ -3,6 +3,7 @@ import pandas as pd
 
 # 1. Import Dataset
 df = pd.read_csv("emp_data.csv")
+# df = pd.read_csv(r"emp_data.csv") #use for windows
 print("\n--- Full Dataset (First 5 Rows) ---")
 print(df.head())
 
