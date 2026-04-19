@@ -54,19 +54,15 @@ print("\n*** Plotly ***")
 fig = px.scatter(df, x="sepal_width", y="sepal_length")
 fig.show()
 
-# # pip install statsmodels
-# import statsmodels.api as sm
-# import numpy as np
-# X = np.array([1, 2, 3, 4])
-# y = np.array([2, 4, 6, 8])
-# X = sm.add_constant(X)
-# model = sm.OLS(y, X).fit()
-# print("\n*** Statsmodels ***")
-# print(model.summary())
-
-import os # dont write this in your code , its just for suppressing tensorflow warnings
-os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # until this 
+# pip install statsmodels
+import statsmodels.api as sm
+import numpy as np
+X = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+y = np.array([2.1, 3.9, 6.2, 8.0, 10.5, 12.1, 13.8, 16.2, 18.0, 20.1])
+X = sm.add_constant(X)
+model = sm.OLS(y, X).fit()
+print("\n*** Statsmodels ***")
+print(model.summary())
 
 # pip install tensorflow
 import tensorflow as tf
