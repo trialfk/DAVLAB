@@ -5,6 +5,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
 data = pd.read_csv("spam.csv")
+# data = pd.read_csv(r"spam.csv")  #use for windows 
 # print(data.head(7)) # print first 7 rows of dataset
 
 #  Convert labels to numeric
