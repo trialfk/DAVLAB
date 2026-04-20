@@ -33,8 +33,8 @@ data = pd.read_csv("sentiment.csv")
 # })
 
 
-# print("--- First 5 rows of dataset ---")
-# print(data.head(5))  #to print dataset top 5 rows
+print("--- First 5 rows of dataset ---")
+print(data.head(5))  #to print dataset top 5 rows
 
 #  Convert labels
 data['sentiment'] = data['sentiment'].map({
