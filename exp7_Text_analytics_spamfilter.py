@@ -6,7 +6,34 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 
 data = pd.read_csv("spam.csv")
 # data = pd.read_csv(r"spam.csv")  #use for windows 
-# print(data.head(7)) # print first 7 rows of dataset
+
+# data = pd.DataFrame({      #use this if importing csv not used else delete this block
+#     "message": [
+#         "Hey how are you",
+#         "Lets meet tomorrow",
+#         "Free cash prize waiting",
+#         "Call me later",
+#         "Win money now",
+#         "Congratulations you won lottery",
+#         "Are you coming today",
+#         "Click here to claim reward",
+#         "Can we talk now",
+#         "Limited time offer buy now",
+#         "Your account has been credited",
+#         "See you at the meeting",
+#         "Urgent call me immediately",
+#         "Exclusive deal just for you",
+#         "Lunch at 2 pm",
+#         "Get free recharge now"
+#     ],
+#     "label": [
+#         "ham","ham","spam","ham","spam","spam","ham","spam",
+#         "ham","spam","spam","ham","ham","spam","ham","spam"
+#     ]
+# })
+
+print("--- First 5 rows of dataset ---")
+print(data.head(5)) # print first 5 rows of dataset
 
 #  Convert labels to numeric
 data['label'] = data['label'].map({'ham': 0, 'spam': 1})
